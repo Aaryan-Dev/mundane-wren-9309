@@ -1,0 +1,31 @@
+<script>
+  function getLocation() {
+    navigator.geolocation.getCurrentPosition(success);
+
+    function success(pos) {
+      const crd = pos.coords;
+
+      console.log("Your current position is:");
+      console.log(`Latitude : ${crd.latitude}`);
+      console.log(`Longitude: ${crd.longitude}`);
+      console.log(`More or less ${crd.accuracy} meters.`);
+      getWeatherOnLocation(crd.latitude, crd.longitude);
+    }
+  }
+
+  function getWeatherOnLocation(lat, lon) {
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=5881c474bc5289105d70aa1b5`;
+
+    fetch(url)
+      .then(function (res) {
+        return res.json();
+      })
+      .then(function (res) {
+        console.log(res);
+        append(res);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  }
+</script>
