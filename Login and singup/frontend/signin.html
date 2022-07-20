@@ -1,0 +1,131 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React-I</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <style>
+        /* input[type=text],
+        input[type=number],
+        input[type=email],
+        input[type=password]
+        {
+            padding:10px 15px;
+            scroll-snap-type: x mandatory;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <h1>Filpkart</h1> -->
+    <div id="container">
+        <div class="top">
+            <p>Have an account? <a href="#">Log in</a></p>
+        </div>
+
+
+        <div class="register-form">
+            <h1>Sign Up</h1>
+            <form>
+                <input type="text" id="name" placeholder="Name" />
+                <input type="email" id="email" placeholder="Email" />
+                <input type="password" id="password" placeholder="Password" />
+
+
+            </form>
+
+            <input type="checkbox">
+            <label for="text">Send me a weekly mix of handpicked projects, plus occasional Kickstarter news</label><br>
+            <input type="checkbox">
+            <label>Contact me about participating in Kickstarter research</label>
+
+            <button id="create-account" onclick="register()">Create account</button>
+            <div class="term-and-conditions">
+                <p>By signing up, you agree to our <a href="#">Privacy Policy</a>, <a href="#">Cookie Policy</a> and <a
+                        href="#">Terms of Use.</a></p>
+                <a href="#">Read more</a>
+            </div>
+            <p class="or">or</p>
+
+            <div><button class="sing-in-with-apple"><i class='bx bxl-apple apple-icon'></i><a href="#">Sing in with
+                        Apple</a></button></div>
+            <button class="continue-with-facebook"><i class='bx bxl-facebook-square facebook-icon'></i><a
+                    href="#">Continue with Facebook</a></button>
+            <p class="paragraph">Get notified when your friends back and launch projects. We'll never post anything on
+                Facebook without your permission.</p>
+            <a href="read-more" style="text-decoration:none;">Read more</a>
+        </div>
+
+
+
+        <!-- <div id="login-form">
+            <h1>Login</h1>
+            <form>
+                <input type="text" id="login-username" placeholder="Username" />
+                <input type="password" id="login-password" placeholder="Password" />
+            </form>
+            <button onclick="Login()">Login</button>
+        </div> -->
+    </div>
+</body>
+
+</html>
+
+<script>
+    async function register() {
+        let signup_data =
+        {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            password: document.getElementById('password').value,
+            username: document.getElementById('username').value,
+            mobile: document.getElementById('mobile').value,
+            description: document.getElementById('description').value
+
+        }
+
+        signup_data = JSON.stringify(signup_data)
+        let signup_data_api_link = "https://masai-api-mocker.herokuapp.com/auth/register"
+
+        let response = await fetch(signup_data_api_link, {
+            method: "POST",
+
+            body: signup_data,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        let data = await response.json();
+        console.log(data);
+    }
+
+    async function Login() {
+        let login_data = {
+            username: document.getElementById('login-username').value,
+            password: document.getElementById('login-password').value
+        }
+
+        login_data = JSON.stringify(login_data)
+
+        let login_api_link = "https://masai-api-mocker.herokuapp.com/auth/login"
+
+        let response = await fetch(login_api_link, {
+            method: 'POST',
+
+            body: login_data,
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        });
+
+        let data = await response.json()
+        alert("login successful")
+
+    }
+</script>

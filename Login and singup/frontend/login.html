@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="../CSS/style.css"> -->
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family:  "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .container-1 {
+            height:auto;
+            width:30%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            margin-top:60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form{
+            max-width:430px;
+            width:100%;
+            border-radius:6px;
+            background-color: white;
+            padding:30px;
+        }
+
+        header {
+            font-size: 18px;
+            font-weight: 400;
+            
+        }
+        
+        form {
+            margin-top: 30px;
+
+        }
+
+        form .field{
+            height:40px;
+            width:100%;
+            margin-top:20px;
+        }
+
+        .field input,
+        .field button {
+            height:100%;
+            width:100%;
+            border:none;
+
+        }
+
+        .field input {
+            padding: 0 15px;
+            border:1px solid black;
+            font-size:14px;
+            font-weight: 400;
+            border-radius:5px;
+        }
+
+        .form-link {
+            margin-top:10px;
+        }
+        .form-link a{
+            text-decoration: none;
+            font-size:14px;
+        }
+
+        .field button {
+            background-color: #028858;
+        }
+
+        .remember-me {
+            margin-top:15px;
+            font-size: 14px;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 24px;
+        }
+
+        .line {
+            width:100%;
+            height:1px;
+            position: relative;
+            background-color: #d4d4d4;
+            margin:15px 0px;
+        }
+
+        
+        .line-1 {
+            width:100%;
+            height:1px;
+            position: relative;
+            background-color: #d4d4d4;
+            margin:15px 0px;
+        }
+
+        .line-2 {
+            width:100%;
+            height:1px;
+            position: relative;
+            background-color: #d4d4d4;
+            margin:15px 0px;
+        }
+
+        .line::before{
+            content:"Or";
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background-color: white;
+            padding:0 10px;
+            color:#232836;
+        }
+
+        .media-option{
+            background-color:black;
+            border-radius: 5px;
+            
+        }
+
+        .media-option a{
+            color:white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        .facebook{
+            background-color: blue;
+            
+        }
+        .term-condition  {
+            margin-top:15px;
+        }
+        .term-condition p {
+            font-size: 14px;
+            font-weight: 400;
+            color:#656969;
+        }
+
+        .term-condition a {
+            text-decoration: none;
+            font-size:14px;
+            font-weight: 600;
+        }
+
+        .sign-in-option {
+            width:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+       
+    </style>
+</head>
+<body>
+    <section class="container-1 forms">
+        <div class="form login">
+            <div class="form-content">
+                <header>Login</header>
+
+                <form>
+                    <div class="field input-field">
+                        <input type="email" placeholder="Email" class="input">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Password" class="input">
+                    </div>
+
+                    <div class="form-link">
+                        <a href="#" class="forget-pass">Forget Password?</a>
+                    </div>
+
+                    <div class="field button-field">
+                        <button>Log in</button>
+                    </div>
+
+                    <div class="remember-me">
+                        <input type="checkbox" />
+                        <span>Remember me</span>
+                    </div>
+
+                    <div class="line">
+
+                    </div>
+
+                    <div class="media-option">
+                        <a href="#" class="field apple">
+                            <i class='bx bxl-apple' ></i>
+                            <span>Sing in with Apple</span>
+                        </a>
+                    </div>
+
+                    <div class="media-option">
+                        <a href="#" class="field facebook">
+                            <i class='bx bxl-facebook-square' ></i>
+                            <span>Sing in with Facebook</span>
+                        </a>
+                    </div>
+
+                    <div class="term-condition">
+                       <p>Get notified when your friends back and launch projects. We'll never post anything on Facebook without your permission.</p>
+                       <a href="#">Read more</a>
+                    </div>
+
+                    <div class="line-1">
+
+                    </div>
+
+                    <div class="sign-in-option">
+                        <span>Need to Kickstarter?<a href="#">Sign up</a></span>
+                    </div>
+
+                    <div class="line-2">
+
+                    </div>
+                </form>
+
+                
+            </div>
+        </div>
+    </section>
+
+   
+</body>
+</html>
