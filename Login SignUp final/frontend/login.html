@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogIn | Kickstarter</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/style2.css" />
+  </head>
+  <body>
+    <section class="container-1 forms">
+      <div class="form login">
+        <div class="form-content">
+          <header>Login</header>
+
+          <div id="fill"></div>
+
+          <form>
+            <div class="field input-field">
+              <input
+                id="login-email"
+                type="text"
+                placeholder="Email"
+                class="input"
+              />
+            </div>
+
+            <div class="field input-field">
+              <input
+                id="login-password"
+                type="password"
+                placeholder="Password"
+                class="input"
+              />
+            </div>
+
+            <div class="form-link">
+              <a href="#" class="forget-pass">Forget Password?</a>
+            </div>
+
+            <div id="append1"></div>
+
+            <div class="field button-field">
+              <button onclick="login()">Log in</button>
+            </div>
+
+            <div class="remember-me">
+              <input type="checkbox" />
+              <span>Remember me</span>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="media-option">
+              <a
+                href="https://appleid.apple.com/auth/authorize?client_id=com.kickstarter.sign-in-with-apple&redirect_uri=https%3A%2F%2Fwww.kickstarter.com%2Fapple_account&response_type=code%20id_token&scope=name%20email&response_mode=web_message&frame_id=3208b550-8dbd-4fbd-8d14-afebde74bd81&m=22&v=1.5.4"
+                class="field apple"
+              >
+                <i class="bx bxl-apple"></i>
+                <span>Sing in with Apple</span>
+              </a>
+            </div>
+
+            <div class="media-option">
+              <a
+                href="https://www.facebook.com/login.php?skip_api_login=1&api_key=69103156693&kid_directed_site=0&app_id=69103156693&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv10.0%2Fdialog%2Foauth%3Fapp_id%3D69103156693%26cbt%3D1658358637557%26channel_url%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fx%252Fconnect%252Fxd_arbiter%252F%253Fversion%253D46%2523cb%253Dfaef4f700236ac%2526domain%253Dwww.kickstarter.com%2526is_canvas%253Dfalse%2526origin%253Dhttps%25253A%25252F%25252Fwww.kickstarter.com%25252Ff8290728d8d428%2526relation%253Dopener%26client_id%3D69103156693%26display%3Dpopup%26domain%3Dwww.kickstarter.com%26e2e%3D%257B%257D%26fallback_redirect_uri%3Dhttps%253A%252F%252Fwww.kickstarter.com%252Flogin%253Fref%253Dnav%26locale%3Den_US%26logger_id%3Df3283f2549f4f34%26origin%3D1%26redirect_uri%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fx%252Fconnect%252Fxd_arbiter%252F%253Fversion%253D46%2523cb%253Df20f768d447c03%2526domain%253Dwww.kickstarter.com%2526is_canvas%253Dfalse%2526origin%253Dhttps%25253A%25252F%25252Fwww.kickstarter.com%25252Ff8290728d8d428%2526relation%253Dopener%2526frame%253Df209b26594062d8%26response_type%3Dtoken%252Csigned_request%252Cgraph_domain%26scope%3Demail%252Cpublic_profile%26sdk%3Djoey%26version%3Dv10.0%26ret%3Dlogin%26fbapp_pres%3D0%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df20f768d447c03%26domain%3Dwww.kickstarter.com%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fwww.kickstarter.com%252Ff8290728d8d428%26relation%3Dopener%26frame%3Df209b26594062d8%26error%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied&display=popup&locale=en_GB&pl_dbl=0"
+                class="field facebook"
+              >
+                <i class="bx bxl-facebook-square"></i>
+                <span>Sing in with Facebook</span>
+              </a>
+            </div>
+
+            <div class="term-condition">
+              <p>
+                Get notified when your friends back and launch projects. We'll
+                never post anything on Facebook without your permission.
+              </p>
+            </div>
+
+            <div class="line-1"></div>
+
+            <div class="sign-in-option">
+              <span>Need to Kickstarter?<a href="signin.html">Sign up</a></span>
+            </div>
+
+            <div class="line-2"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+<script>
+  function login() {
+    event.preventDefault();
+    let login_data = {
+      username: document.getElementById("login-email").value,
+      password: document.getElementById("login-password").value,
+    };
+
+    if (
+      document.getElementById("login-email").value === "" &&
+      document.getElementById("login-password").value === ""
+    ) {
+      let fill = document.querySelector("#fill");
+      fill.innerHTML = "All, boxes are mandatory to fill*";
+      fill.style.transition = "1s";
+      fill.setAttribute("class", "pop2");
+    } else {
+      body2 = JSON.stringify(login_data);
+
+      fetch("https://masai-api-mocker.herokuapp.com/auth/login", {
+        method: "POST",
+        body: body2,
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((res) => {
+          return res.json();
+        })
+        .then((res) => {
+          console.log(res);
+
+          if (res.error == false) {
+            // home page link here
+            window.location.href = "../index.html";
+          } else {
+            let pop = document.querySelector("#append1");
+            pop.innerHTML = "Incorrect Username/Password";
+            pop.style.transition = "1s";
+            pop.setAttribute("class", "pop1");
+          }
+
+          getDetails(res, login_data);
+        });
+    }
+  }
+
+  function getDetails({ token }, { username }) {
+    fetch(`https://masai-api-mocker.herokuapp.com/user/${username}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        console.log(res);
+        localStorage.setItem("user_data", JSON.stringify(res));
+      });
+  }
+</script>
