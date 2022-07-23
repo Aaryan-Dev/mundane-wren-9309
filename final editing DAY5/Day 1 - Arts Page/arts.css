@@ -1,0 +1,362 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+body{
+    position: relative;
+ background-color: #ffffff
+}
+
+/* CSS for navbar */
+
+#parent{
+    /* border: 2px solid red; */
+    width:100%;
+      height:auto;
+   
+}
+
+
+
+
+#navbar{
+    width:100%;
+    height: 60px;
+   display: flex;
+    justify-content:space-evenly ;
+    align-items: center;
+ 
+
+}
+#image{
+    width: 10%;
+    height: 100%;
+}
+
+
+#navbar a{
+    outline: 0;
+     border: none;
+    text-decoration: none;
+    margin-left: -40px;
+}
+
+
+#one{
+   display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width:100%;
+    height: 50px
+}
+#one a{
+    outline: 0;
+     border: none;
+    text-decoration: none;
+}
+
+/* body part css */
+
+#main{
+    /* border: 2px solid black; */
+   
+    height: auto;
+    width: 80%;
+     margin: auto;
+     margin-top: 60px;
+    }
+
+
+
+
+#two{
+   /* border:1px solid red; */
+     font-weight: lighter;
+
+    
+}
+
+
+#two>p{
+    line-height:2;
+}
+
+#two2{
+    display: flex;
+     align-items: center;
+    justify-content: space-around;
+    line-height: 4;
+}
+#two2 a{
+    outline: 0;
+     border: none;
+    text-decoration: none;
+}
+
+
+/* main body */
+
+#three{
+    width: 80%;
+margin-top:20px;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 40px;
+row-gap: 20px;
+line-height: 2;
+margin-left: 40px;
+
+
+}
+#img{
+    width: 100%;
+}
+.small{
+    width:50%;
+    display:flex;
+    justify-content: space-between;
+
+}
+.small img{
+    height:20px;
+    float:right;
+    margin-left: 60px;
+    /* object-fit: contain; */
+}
+
+#three2>div{
+/* border: 2px solid green; */
+
+}
+
+#three2 p{
+    line-height: 2;
+    margin-left: 30px;
+
+ 
+}
+.big{
+    float:left;
+    width:30%
+}
+#three button{
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: black;
+    color: #ffffff;
+}
+
+
+
+
+
+
+#four{
+    margin-top: 50px;
+   /* border: 1px solid blue; */
+   margin-left: 90px;
+   line-height: 2;
+   padding: 10px;
+   margin-bottom: 30px;
+  
+}
+
+#four input{
+    padding: 10px;
+}
+
+#four button {
+    padding: 10px;
+    background-color: black;
+    color: #ffffff;
+
+}
+
+#five{
+    /* border: 2px solid red; */
+    
+}
+
+#five>a{
+    margin-left: 50px;
+}
+
+
+#five1{
+  margin: 10px;
+    line-height: 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:5px
+}
+
+#five1>div>img{
+    width:80%
+}
+#five >div>p{
+    line-height:0.5;
+}
+#five>div h2{
+    font-weight: lighter;
+}
+#five>div h2+p+p{
+    color: grey;
+}
+
+hr+p{
+    margin-top: 40px;
+}
+
+#six{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:10px;
+    margin-bottom: 40px;
+}
+#six div{
+    line-height:2;
+    padding:5px;
+}
+#six>div>img{
+    width:100%
+}
+
+#six>div>img+h2{
+    font-weight: lighter;
+
+}
+
+
+#seven{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:10px;
+    margin-bottom: 40px;
+}
+#seven>div{
+    line-height: 2;
+}
+#seven>div>img{
+    width:100%
+}
+#seven>div>img+h2{
+    font-weight: lighter;
+}
+
+#seven>div a{
+    outline: 0;
+    border: none;
+   text-decoration: none
+}
+
+
+#eight{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:10px;
+    margin-bottom: 40px;
+}
+
+#eight>div>img{
+    width:100%
+}
+
+#eight>div h2{
+    font-weight: lighter;
+}
+
+#eight>div p{
+    line-height: 2;
+}
+
+#eight>div p+p{
+    color: gray;
+}
+
+
+#nine{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:20px;
+    margin-bottom: 40px;
+}
+
+#nine>div>img{
+    width: 100%;
+}
+
+
+#nine>div h2{
+    font-weight: lighter;
+}
+#nine >div p{
+    line-height: 2;
+}
+
+#nine>div a{
+    outline: 0;
+    border: none;
+   text-decoration: none
+}
+
+
+#ten{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
+#ten>div img{
+    width: 100%;
+}
+
+#ten >div h2{
+    font-weight: lighter;
+}
+
+#ten>div p{
+    line-height: 2;
+}
+#ten>div a{
+    outline: 0;
+    border: none;
+   text-decoration: none
+}
+
+
+
+#eleven{
+    /* border: 1px solid black; */
+    width:60%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: 170px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:60px
+}
+#eleven>div img{
+    width:100%
+}
+
+
+#eleven>div h2{
+    font-weight: lighter;
+}
+
+#eleven>div{
+    line-height: 2;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+#eleven> div a{
+    outline: 0;
+    border: none;
+   text-decoration: none
+}
