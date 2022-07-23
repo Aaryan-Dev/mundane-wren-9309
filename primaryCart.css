@@ -1,0 +1,227 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #ebebeb00;
+  }
+
+  #top {
+    display: flex;
+    
+    width: 57.5%;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1.5%;
+    padding-bottom: -2%;
+    margin-top: -2%;
+    background-color:
+    #f2f2f2 ;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    
+  }
+  #top > img {
+    width: 23%;
+  }
+  h1 {
+    text-align: center;
+    font-size: 27px;
+    color: 
+    #2d2d2f;
+  }
+
+  #again {
+    margin: auto;
+    width: 75%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #main {
+    margin: auto;
+    width: 75%;
+    /* border: 1px solid black; */
+    box-shadow: -18px 27px 71px 0px rgb(247, 247, 247);
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: space-between;
+  }
+  #p1 {
+    /* margin: auto; */
+    width: 59%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+  }
+
+  #p1>div{
+    padding:5%;
+    margin-bottom: 1.5%;
+  }
+
+  #c1>div{
+    display: flex;
+    align-items: center;
+  }
+
+  #c1>div>img{
+    width: 5%;
+    margin-right: 2%;
+    margin-top: 2%;
+  }
+
+  #c1{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+  }
+
+
+  #p2 {
+    /* margin: auto; */
+    width: 39.5%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+
+  #c1 {
+    width: 100%;
+    /* border: 1px solid black; */
+  }
+  #c2 {
+    /* border: 1px solid black; */
+    width: 100%;
+  }
+
+  #c2>p:nth-child(1){
+    font-weight:700;
+  }
+
+  #pro{
+    font-weight:600;
+    color: rgb(195, 195, 195);
+    
+  }
+
+  #promo{
+    width: 60%;
+    height: 14%;
+    margin-bottom:7%;
+     padding-left: 3%;
+     font-weight:900;
+     /* color: rgb(193, 255, 193);  */
+    /* color: rgb(255, 218, 218);  */
+
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  #c2>button{
+    width: 30%;;
+    font-weight: 700;
+    height: 15%;
+    font-size:18px;
+    color:white;
+    background-color:rgb(40, 40, 40);
+  }
+#c2>button:hover{
+background-color: black;
+cursor: pointer;
+}
+
+  #need{
+    width: 80%;
+    font-size: 18px;
+    font-weight:100;
+    margin-bottom: 8%;
+    /* line-height:180%; */
+  }
+
+  #c3 {
+    /* border: 1px solid black; */
+    width: 100%;
+  }
+#c3>p:nth-child(1){
+  font-size:20px;
+  font-weight:600;
+}
+
+#c3>p+p{
+  margin-top: 3%;
+  line-height: 90%;
+  font-weight:100;
+  text-decoration: underline;
+  }
+
+  #c4 {
+    border: 1px solid black;
+    width: 100%;
+  }
+
+  #m1 {
+    border: 1px solid black;
+    width: 100%;
+    padding: 3%;
+    font-size:20px;
+    font-weight:700;
+    text-decoration:overline;
+  }
+  #m2 {
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid black;
+  }
+
+  #item{
+    display: flex;
+    margin-bottom: 3%;
+    border-bottom:1px solid rgba(0, 0, 0, 0.144);
+  }
+
+  #m3 {
+    border: 1px solid black;
+    background-color:rgba(255, 255, 255, 0.975);
+    width: 100%;
+    border-right:1px;
+    border-top:1px;
+    padding-left: 2%;
+    justify-content: space-evenly;
+  }
+
+#pic{
+  width: 40%;
+  margin-right: 4%;
+}
+
+
+#z1{
+  display: flex;
+  justify-content: space-between;
+}
+#z2{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+#z3{
+  display: flex;
+  justify-content: space-between;
+}
+
+#pay>button{
+  background-color:rgb(0, 0, 0);
+  color:rgb(255, 255, 255);
+  border: 0px solid black;
+  padding:2%;
+}
+#pay>button:hover{
+  background-color: rgb(39, 39, 39);
+  cursor: pointer;
+  }
