@@ -1,0 +1,317 @@
+#secondDiv {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 2fr 1fr;
+    border: 1px solid transparent;
+    width: 60%;
+    margin: auto;
+}
+
+#shopping>div:last-child {
+    border: 1px solid transparent;
+    width: 90%
+}
+
+#shopping>div:last-child>div>p {
+    margin-top: 10%
+}
+
+#paymentBag, #order{
+    margin-top:100px;
+}
+
+#paymentBag p, #order p,
+#paymentBag span {
+    margin-top: 2%;
+    color: gray;
+    font-family: sans-serif;
+    font-size: 10px;
+}
+
+#shopping>div:last-child>div,
+#cardDetails>div {
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#shopping,
+#shipping,
+#payment,
+#cardDetails,
+#bill {
+    margin-top: 5%;
+}
+#bill{
+    margin-bottom: 10%;
+}
+
+@media screen and (min-width:0px) and (max-width:800px){
+    #secondDiv{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Navbar CSS */
+#navbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    margin: auto;
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    align-items: center;
+}
+#leftPage{
+    width: 33%;
+}
+#leftPage>div:first-child{
+    display: flex;
+    justify-content:space-evenly;
+    height: auto;
+}
+#leftPage>div:first-child>p{
+    text-transform: uppercase;
+    font-size: 11px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+#leftPage>div:first-child>p:hover{
+    text-decoration: underline;
+}
+#navbar>div:nth-child(2){
+    width: 6%;
+}
+#navbar>div:nth-child(4){
+    width: 11%;
+}
+#navbar>div:nth-child(3){
+    width: 20%;
+    height: auto;
+    text-align: center;
+    cursor: pointer;
+}
+#navbar>div:nth-child(3)>img{
+    width: 100px;
+    height: 21px;
+}
+#rightPage{
+    width: 30%;
+}
+#rightPage>div:first-child{
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+}
+#rightPage>div:first-child>p{
+    text-transform: uppercase;
+    font-size: 11px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+#rightPage>div:first-child>p:hover{
+    text-decoration: underline;
+}
+#navbar>div>div>p>a{
+    text-decoration: none;
+    color: #000000;
+}
+#allProduct{
+    display: none;
+}
+#cartLogo{
+    display: none;
+}
+
+/* Media Query for medium screen */
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+
+    #allProduct{
+         text-align: center;
+         display: flex;
+         justify-content: space-around;
+         padding: 0px 10px 0px 10px;
+         height: 45px;
+         margin-bottom: 10px;
+     }
+     #allProduct>div{
+         border: 1px solid grey;
+         width: 100%;
+         border-radius: 13px;
+         font-family: 'Open Sans', sans-serif;
+     }
+ 
+     /* product bar */
+     .productbar {
+         overflow: hidden;
+     }
+     .dropdown {
+         float: left;
+         overflow: hidden;
+     }
+       /* Dropdown button */
+     .dropdown .dropbtn {
+         border: none;
+         outline: none;
+         color: black;
+         padding: 14px 16px;
+         background-color: inherit;
+         font-family: inherit;
+         margin: 0; 
+     }
+     .dropdown-content{
+         width: 95%;
+         display: none;
+         position: absolute;
+         background-color: #f9f9f9;
+         z-index: 1;
+         font-size: 11px;
+         font-family: 'Open Sans', sans-serif;
+     }
+     .dropdown-content>span:hover{
+         cursor: pointer;
+         text-decoration: underline;
+     }
+     /* Links inside the dropdown */
+     .dropdown-content span {
+         float: none;
+         color: black;
+         padding: 12px 16px;
+         text-decoration: none;
+         display: block;
+         text-align: left;
+     }
+       /* Show the dropdown menu on hover */
+     .dropdown:hover .dropdown-content {
+         display: block;
+     }
+ 
+     #cartLogo{
+         text-align: center;
+         display: flex;
+         justify-content: space-evenly;
+         margin-bottom: 10px;
+     }
+     #cartLogo>img{
+         width: 20px;
+         height: 20px;
+         cursor: pointer;
+     }
+ 
+ 
+     #leftPage>div:first-child{
+         display: none;
+     }
+     #navbar>div:nth-child(3){
+         width: 100%;
+         margin: auto;
+     }
+     #rightPage>div:first-child{
+         display: none;
+     }
+}
+
+/* Media Query for small screen */
+@media screen and (min-width: 0px) and (max-width: 799px) {
+
+    #allProduct{
+         text-align: center;
+         display: flex;
+         justify-content: space-around;
+         padding: 0px 10px 0px 10px;
+         height: 45px;
+         margin-bottom: 10px;
+     }
+     #allProduct>div{
+         border: 1px solid grey;
+         width: 100%;
+         border-radius: 13px;
+         font-family: 'Open Sans', sans-serif;
+     }
+ 
+     /* product bar */
+     .productbar {
+         overflow: hidden;
+     }
+     .dropdown {
+         float: left;
+         overflow: hidden;
+     }
+       /* Dropdown button */
+     .dropdown .dropbtn {
+         border: none;
+         outline: none;
+         color: black;
+         padding: 14px 16px;
+         background-color: inherit;
+         font-family: inherit;
+         margin: 0; 
+     }
+     .dropdown-content{
+         width: 95%;
+         display: none;
+         position: absolute;
+         background-color: #f9f9f9;
+         z-index: 1;
+         font-size: 11px;
+         font-family: 'Open Sans', sans-serif;
+     }
+     .dropdown-content>span:hover{
+         cursor: pointer;
+         text-decoration: underline;
+     }
+     /* Links inside the dropdown */
+     .dropdown-content span {
+         float: none;
+         color: black;
+         padding: 12px 16px;
+         text-decoration: none;
+         display: block;
+         text-align: left;
+     }
+       /* Show the dropdown menu on hover */
+     .dropdown:hover .dropdown-content {
+         display: block;
+     }
+ 
+     #cartLogo{
+         text-align: center;
+         display: flex;
+         justify-content: space-evenly;
+         margin-bottom: 10px;
+     }
+     #cartLogo>img{
+         width: 20px;
+         height: 20px;
+         cursor: pointer;
+     }
+ 
+ 
+     #leftPage>div:first-child{
+         display: none;
+     }
+     #navbar>div:nth-child(3){
+         width: 100%;
+         margin: auto;
+     }
+     #rightPage>div:first-child{
+         display: none;
+     }
+
+     #storeProduct{
+        width: 100%;
+     }
+     #pricePart{
+        width: 100%;
+     }
+     #container{
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    #checkout{
+        width: 100%;
+    }
+}

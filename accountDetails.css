@@ -1,0 +1,353 @@
+/* Navbar CSS */
+#navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    margin: auto;
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    align-items: center;
+}
+
+#leftPage {
+    width: 33%;
+}
+
+#leftPage>div:first-child {
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+}
+
+#leftPage>div:first-child>p {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+
+#leftPage>div:first-child>p:hover {
+    text-decoration: underline;
+}
+
+#navbar>div:nth-child(2) {
+    width: 6%;
+}
+
+#navbar>div:nth-child(4) {
+    width: 11%;
+}
+
+#navbar>div:nth-child(3) {
+    width: 20%;
+    height: auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+#navbar>div:nth-child(3)>img {
+    width: 100px;
+    height: 21px;
+}
+
+#rightPage {
+    width: 30%;
+}
+
+#rightPage>div:first-child {
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+}
+
+#rightPage>div:first-child>p {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+
+#rightPage>div:first-child>p:hover {
+    text-decoration: underline;
+}
+
+#navbar>div>div>p>a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#allProduct {
+    display: none;
+}
+
+#cartLogo {
+    display: none;
+}
+
+/* Media Query for medium screen */
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+
+    #allProduct {
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        padding: 0px 10px 0px 10px;
+        height: 45px;
+        margin-bottom: 10px;
+    }
+
+    #allProduct>div {
+        border: 1px solid grey;
+        width: 100%;
+        border-radius: 13px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    /* product bar */
+    .productbar {
+        overflow: hidden;
+    }
+
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+    /* Dropdown button */
+    .dropdown .dropbtn {
+        border: none;
+        outline: none;
+        color: black;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .dropdown-content {
+        width: 95%;
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        z-index: 1;
+        font-size: 11px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .dropdown-content>span:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content span {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    #cartLogo {
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 10px;
+    }
+
+    #cartLogo>img {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+
+    #leftPage>div:first-child {
+        display: none;
+    }
+
+    #navbar>div:nth-child(3) {
+        width: 100%;
+        margin: auto;
+    }
+
+    #rightPage>div:first-child {
+        display: none;
+    }
+}
+
+/* Media Query for small screen */
+@media screen and (min-width: 0px) and (max-width: 799px) {
+
+    #allProduct {
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        padding: 0px 10px 0px 10px;
+        height: 45px;
+        margin-bottom: 10px;
+    }
+
+    #allProduct>div {
+        border: 1px solid grey;
+        width: 100%;
+        border-radius: 13px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    /* product bar */
+    .productbar {
+        overflow: hidden;
+    }
+
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+    /* Dropdown button */
+    .dropdown .dropbtn {
+        border: none;
+        outline: none;
+        color: black;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .dropdown-content {
+        width: 95%;
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        z-index: 1;
+        font-size: 11px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .dropdown-content>span:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content span {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    #cartLogo {
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 10px;
+    }
+
+    #cartLogo>img {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+
+    #leftPage>div:first-child {
+        display: none;
+    }
+
+    #navbar>div:nth-child(3) {
+        width: 100%;
+        margin: auto;
+    }
+
+    #rightPage>div:first-child {
+        display: none;
+    }
+}
+
+#accDetails {
+    margin-top: 100px;
+    width: 70%;
+    font-family: sans-serif;
+    padding: 20px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+* {
+    font-size: 10px;
+    color: gray;
+}
+
+#child{
+    width: 20%;
+    height: 10%;
+}
+
+#child2{
+    line-height:8px;
+    width: 20%;
+}
+
+#accDetails h1{
+    color: black;
+    font-size: 15px;
+}
+
+#box2>p{
+    font-size: 15px;
+    text-align: center;
+}
+
+#box2>form{
+    padding: 0px 30px;
+}
+
+#edit{
+    width: 30%;
+}
+
+#acc1{
+    font-size: 15px;
+    width: 30%;
+}
+form>input{
+    margin-top:1%;
+    margin-bottom:3%;
+    padding:10px 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="submit"]{
+    width: 40%;
+    margin-left: 30%;
+    background-color: black;
+    color: white;
+}
+
+#modal{
+    font-size: 15px;
+    width: 100%;
+    font-family: sans-serif;
+    color: black;
+    border: 1px solid black;
+    /* margin-left:40% */
+}
