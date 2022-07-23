@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./payment.css" />
+  </head>
+  <body>
+    <nav>
+      <div>asos</div>
+      <div>Checkout</div>
+      <div>
+        <img
+          id="logo"
+          src="https://www.digicert.com/content/dam/digicert/images/navigation/header/smart-seal-nav-promo.png"
+          alt=""
+        />
+      </div>
+    </nav>
+    <div class="container">
+      <h1>ADD CREDIT/DEBIT CARD</h1>
+
+      <label for="">CARD NUMBER</label>
+      <input id="cardNumber" type="number" />
+
+      <label for="">EXPIRY DATE</label>
+      <input id="date" type="month" />
+
+      <label for="">NAME ON CARD</label>
+      <input id="name" type="text" />
+
+      <label for="">CVV</label>
+      <input id="cvv" type="number" />
+      <br />
+      <div id="man">
+        <input id="check" type="checkbox" checked="checked" />
+        <span class="checkmark">Save card details for next time</span>
+      </div>
+
+      <br />
+      <button onclick="fun()" id="btn1">USE THIS CARD</button>
+      <div id="box1">
+        <h2 for="">WE ACCEPT :</h2>
+        <img
+          id="img1"
+          src="https://assets.asosservices.com/asos-finance/images/marketing/single.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="container2">
+      <button onclick="fun2()" id="btn2">PLACE ORDER</button>
+      <p>
+        By placing your order you agree to our <u>Terms & Conditions</u>,
+        <u>privacy</u> and <u>returns policies</u>. You also consent to some of
+        your data being stored by ASOS, which may be used to make future
+        shopping experiences better for you.
+      </p>
+    </div>
+  </body>
+</html>
+<script src="./payment.js"></script>
